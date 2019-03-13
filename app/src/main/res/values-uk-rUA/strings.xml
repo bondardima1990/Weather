@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Weather</string>
+
+    <string name="wind_speed">Швидкість вітру: %s м/с</string>
+    <string name="pressure">Тиск: %s мбар</string>
+    <string name="humidity">"Воологість: %s <xliff:g>%%</xliff:g> "</string>
+    <string name="sunrise">Схід сонця: %s</string>
+    <string name="sunset">Захід сонця: %s</string>
+    <string name="last_update">Останнє оновлення %s</string>
+    <string name="place_not_found">На жаль, не знайдено даних про погоду</string>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="for_degree_padding">20dp</dimen>
+    <dimen name="for_country_padding">4dp</dimen>
+
+
+    <dimen name="text_size_sky">100sp</dimen>
+    <dimen name="text_size_details">10sp</dimen>
+    <dimen name="text_size_temperature">100sp</dimen>
+    <dimen name="text_size_degree">36sp</dimen>
+    <dimen name="text_size_city">20sp</dimen>
+    <dimen name="text_size_last_update">8sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>
