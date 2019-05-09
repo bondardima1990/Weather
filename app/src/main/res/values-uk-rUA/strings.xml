@@ -10,5 +10,9 @@
     <string name="sunset">Захід сонця: %s</string>
     <string name="last_update">Останнє оновлення %s</string>
     <string name="place_not_found">На жаль, не знайдено даних про погоду</string>
+    <string name="action_search">Пошук</string>
+    <string name="action_refresh">Оновити</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="action_about">Про ...</string>
 
 </resources>

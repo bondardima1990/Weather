@@ -1,4 +1,4 @@
-package com.dima.weather.current_weather;
+package com.dima.weather.screens.weather;
 
 import android.graphics.Typeface;
 import android.view.View;
@@ -16,8 +16,8 @@ public class CurrentWeatherView implements CurrentWeatherContract.View {
     private View root;
 
     private EditText searchField;
-    private TextView sky;
-    private TextView status;
+    private TextView icon;
+    private TextView description;
     private TextView temperature;
     private TextView city;
     private TextView windSpeed;
@@ -36,9 +36,9 @@ public class CurrentWeatherView implements CurrentWeatherContract.View {
 
     private void initView() {
         searchField = root.findViewById(R.id.search);
-        sky = root.findViewById(R.id.sky);
-        sky.setTypeface(Typeface.createFromAsset(root.getContext().getAssets(), "fonts/weather.ttf"));
-        status = root.findViewById(R.id.weather_status);
+        icon = root.findViewById(R.id.icon);
+        icon.setTypeface(Typeface.createFromAsset(root.getContext().getAssets(), "fonts/weather.ttf"));
+        description = root.findViewById(R.id.description);
         temperature = root.findViewById(R.id.temperature);
         city = root.findViewById(R.id.city);
         windSpeed = root.findViewById(R.id.wind_speed);
@@ -57,13 +57,13 @@ public class CurrentWeatherView implements CurrentWeatherContract.View {
     }
 
     @Override
-    public void setupSky(int sky) {
-        this.sky.setText(sky);
+    public void setupIcon(int icon) {
+        this.icon.setText(icon);
     }
 
     @Override
-    public void setupWeatherStatus(String status) {
-        this.status.setText(status.substring(0,1).toUpperCase() + status.substring(1));
+    public void setupDescription(String description) {
+        this.description.setText(description.substring(0,1).toUpperCase() + description.substring(1));
     }
 
     @Override
@@ -92,18 +92,18 @@ public class CurrentWeatherView implements CurrentWeatherContract.View {
     }
 
     @Override
-    public void setupSunrise(String sunrise) {
-        this.sunrise.setText(root.getResources().getString(R.string.sunrise, TimeFormatter.timeFormatter(Long.valueOf(sunrise))));
+    public void setupSunrise(int sunrise) {
+        this.sunrise.setText(root.getResources().getString(R.string.sunrise, TimeFormatter.timeFormatter(sunrise)));
     }
 
     @Override
-    public void setupSunset(String sunset) {
-        this.sunset.setText(root.getResources().getString(R.string.sunset, TimeFormatter.timeFormatter(Long.valueOf(sunset))));
+    public void setupSunset(int sunset) {
+        this.sunset.setText(root.getResources().getString(R.string.sunset, TimeFormatter.timeFormatter(sunset)));
     }
 
     @Override
-    public void setupLastUpdate(String lastUpdate) {
-        this.lastUpdate.setText(root.getResources().getString(R.string.last_update, TimeFormatter.timeFormatter(Long.valueOf(lastUpdate))));
+    public void setupLastUpdate(int lastUpdate) {
+        this.lastUpdate.setText(root.getResources().getString(R.string.last_update, TimeFormatter.timeFormatter(lastUpdate)));
     }
 
     @Override
@@ -114,8 +114,8 @@ public class CurrentWeatherView implements CurrentWeatherContract.View {
     @Override
     public void showResult(boolean show) {
         if (show) {
-            sky.setVisibility(View.VISIBLE);
-            status.setVisibility(View.VISIBLE);
+            icon.setVisibility(View.VISIBLE);
+            description.setVisibility(View.VISIBLE);
             temperature.setVisibility(View.VISIBLE);
             city.setVisibility(View.VISIBLE);
             windSpeed.setVisibility(View.VISIBLE);
@@ -125,8 +125,8 @@ public class CurrentWeatherView implements CurrentWeatherContract.View {
             sunset.setVisibility(View.VISIBLE);
             lastUpdate.setVisibility(View.VISIBLE);
         } else {
-            sky.setVisibility(View.GONE);
-            status.setVisibility(View.GONE);
+            icon.setVisibility(View.GONE);
+            description.setVisibility(View.GONE);
             temperature.setVisibility(View.GONE);
             city.setVisibility(View.GONE);
             windSpeed.setVisibility(View.GONE);

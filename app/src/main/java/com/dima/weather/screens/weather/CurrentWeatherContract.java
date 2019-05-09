@@ -1,4 +1,4 @@
-package com.dima.weather.current_weather;
+package com.dima.weather.screens.weather;
 
 import io.reactivex.Observable;
 
@@ -7,16 +7,16 @@ public interface CurrentWeatherContract {
     interface View{
         Observable<CharSequence> searchChanged();
 
-        void setupSky(int sky);
-        void setupWeatherStatus(String status);
+        void setupIcon(int icon);
+        void setupDescription(String description);
         void setupTemperature(double temperature);
         void setupCity(String city);
         void setupWindSpeed(double speed);
         void setupPressure(double pressure);
         void setupHumidity(double humidity);
-        void setupSunrise(String sunrise);
-        void setupSunset(String sunset);
-        void setupLastUpdate(String lastUpdate);
+        void setupSunrise(int sunrise);
+        void setupSunset(int sunset);
+        void setupLastUpdate(int lastUpdate);
 
         void showLoading(boolean show);
         void showResult(boolean show);

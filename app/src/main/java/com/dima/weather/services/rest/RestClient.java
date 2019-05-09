@@ -1,4 +1,4 @@
-package com.dima.weather.data.rest;
+package com.dima.weather.services.rest;
 
 import com.dima.weather.utils.Constants;
 

@@ -1,4 +1,4 @@
-package com.dima.weather.data.dto;
+package com.dima.weather.services.rest.dto;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
